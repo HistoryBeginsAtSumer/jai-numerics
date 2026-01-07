@@ -5,7 +5,7 @@ chol_inplace :: (A: *Mat) -> bool {
     n := A.rows;
 
     for k: 0..n - 1 {
-        sum: float = 0.;
+        sum := 0.;
 
         for j: 0..k - 1 {
             v := mat_get(A, k, j);
@@ -22,7 +22,7 @@ chol_inplace :: (A: *Mat) -> bool {
         mat_set(A, k, k, Lkk);
 
         for i: k + 1..n - 1 {
-            s: float = 0.;
+            s := 0.;
 
             for j: 0..k - 1 {
                 s += mat_get(A, i, j) * mat_get(A, k, j);

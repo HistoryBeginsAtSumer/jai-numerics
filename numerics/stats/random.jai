@@ -7,7 +7,7 @@
 //
 _rng_state: u64 = 42;
 _XORSHIFT_MULTIPLIER :: 2_685_821_657_736_338_717;
-_NORMALIZING_CONST :: cast(float32)1. / 4_294_967_296.;
+_NORMALIZING_CONST :: cast(float)1. / 4_294_967_296.;
 
 rand :: () -> float {
     // xorshift64*
